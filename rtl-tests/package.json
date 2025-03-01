@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "fkill :9009 :3003 -f -s && concurrently \"npm:backend\" \"npm:frontend\"",
-    "test": "jest --watchAll --verbose",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "frontend": "webpack serve --open",
     "backend": "node backend/server.js",
